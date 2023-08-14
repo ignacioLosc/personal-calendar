@@ -24,15 +24,20 @@ export default function Column() {
         <div className="add-button">
           <button onClick={() => setOpen(true)}>Add contact</button>
         </div>
-        <input
-          className="column-input-filter"
-          placeholder={SEARCH_BAR_PLACEHOLDER}
-          value={filterText}
-          onChange={(e) => {
-            setFilterText(e.target.value);
-            filterContacts(e.target.value);
-          }}
-        ></input>
+        <div className="input-wrapper">
+          <input
+            className="column-input-filter"
+            placeholder={SEARCH_BAR_PLACEHOLDER}
+            value={filterText}
+            onChange={(e) => {
+              setFilterText(e.target.value);
+              filterContacts(e.target.value);
+            }}
+          ></input>
+          <div class="filter-clear-button">
+            <button onClick={() => setFilterText("")}>X</button>
+          </div>
+        </div>
       </div>
       {(filterText.length > 0 ? filteredContacts : contacts).map((contact) => {
         return <Contact id={contact.id} key={contact.id} />;

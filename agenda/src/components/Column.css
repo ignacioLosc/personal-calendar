@@ -123,3 +123,25 @@
     font-size: medium;
     justify-content: space-between;
 }
+
+.filter-clear-button button {
+    all: unset;
+    font-weight: bold;
+    padding: 0.5rem;
+    color: black;
+    background: var(--COLOR-GRAY-LIGHT);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 4px 4px 5px -4px rgba(135,135,135,0.75);
+}
+
+.filter-clear-button button:hover {
+    background: rgb(145, 144, 144);
+    transform: scale(1.05);
+}
+
+.input-wrapper {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+}
