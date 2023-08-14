@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 const store = (set) => ({
   contacts: [{ name: "Tom", phone: "1161498121", id: 1 }],
+  filteredContacts: [],
   addContact: (name, phone, id) =>
     set((store) => ({ contacts: [...store.contacts, { name, phone, id }] })),
   deleteContact: (id) =>
@@ -14,6 +15,12 @@ const store = (set) => ({
         ...store.contacts.filter((contact) => contact.id !== id),
         { name, phone, id },
       ],
+    })),
+  filterContacts: (filter) =>
+    set((store) => ({
+      filteredContacts: store.contacts.filter((contact) =>
+        contact.name.toLowerCase().startsWith(filter.toLowerCase())
+      ),
     })),
 });
 

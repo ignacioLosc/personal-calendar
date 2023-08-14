@@ -9,10 +9,13 @@ const PHONE_INPUT_PLACEHOLDER = "+54 11 6149-8121";
 export default function Column() {
   const [nameText, setNameText] = useState("");
   const [phoneText, setPhoneText] = useState("");
+  const [filterText, setFilterText] = useState("");
   const [open, setOpen] = useState(false);
 
   const contacts = useStore((store) => store.contacts);
   const addContact = useStore((store) => store.addContact);
+  const filteredContacts = useStore((store) => store.filteredContacts);
+  const filterContacts = useStore((store) => store.filterContacts);
 
   return (
     <section className="column">
@@ -23,9 +26,14 @@ export default function Column() {
         <input
           className="column-input-filter"
           placeholder="Search contact"
+          value={filterText}
+          onChange={(e) => {
+            setFilterText(e.target.value);
+            filterContacts(e.target.value);
+          }}
         ></input>
       </div>
-      {contacts.map((contact) => {
+      {(filterText.length > 0 ? filteredContacts : contacts).map((contact) => {
         return <Contact id={contact.id} key={contact.id} />;
       })}
       {open && (
