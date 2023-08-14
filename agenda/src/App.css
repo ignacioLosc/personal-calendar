@@ -1,0 +1,14 @@
+.App {
+  /* background: var(--COLOR-GRAY); */
+  background: lightslategrey;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.agenda-title {
+  color: white;
+  font-weight: lighter;
+}

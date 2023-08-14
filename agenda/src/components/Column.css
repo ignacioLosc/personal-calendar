@@ -1,0 +1,124 @@
+.column {
+    background: lightblue;
+    min-height: 30rem;
+    color: #fff;
+    width: 30rem;
+    max-width: 30rem;
+    border-radius: 4px;
+    padding: 0.5rem;
+    box-shadow: 6px 6px 5px -4px rgba(0,0,0,0.2);
+}
+
+.column-modifiers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column-input-filter {
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: medium;
+    border: none;
+    outline: none;
+}
+
+.add-button button {
+    all: unset;
+    font-weight: bold;
+    padding: 0.5rem;
+    color: black;
+    background: var(--COLOR-GRAY-LIGHT);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 4px 4px 5px -4px rgba(135,135,135,0.75);
+}
+
+.add-button button:hover {
+    background: rgb(145, 144, 144);
+    transform: scale(1.05);
+}
+
+.submit-button button {
+    all: unset;
+    padding: 0.5rem;
+    color: black;
+    background: var(--COLOR-GRAY-LIGHT);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 8px 8px 5px -4px rgba(135,135,135,0.75);
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.submit-button button:hover {
+    background: rgb(145, 144, 144);
+    transform: scale(1.05);
+}
+
+.cancel-button button {
+    all: unset;
+    padding: 0.5rem;
+    color: black;
+    background: var(--COLOR-GRAY-LIGHT);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 8px 8px 5px -4px rgba(135,135,135,0.75);
+    font-weight: bold;
+}
+
+.cancel-button button:hover {
+    background: rgb(145, 144, 144);
+    transform: scale(1.05);
+}
+
+.Modal {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.modal-content {
+    background: white;
+    position: absolute;
+    z-index: 1;
+    padding: 1rem;
+    height: 15rem;
+    width: 25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    box-shadow: 4px 4px 5px -4px rgba(0,0,0,0.75);
+}
+
+.modal-title {
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+
+.modal-input {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: medium;
+    justify-content: space-between;
+}
