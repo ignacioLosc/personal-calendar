@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const NAME_INPUT_PLACEHOLDER = "Enter a contact name";
 const PHONE_INPUT_PLACEHOLDER = "+54 11 6149-8121";
+const SEARCH_BAR_PLACEHOLDER = "Search contact";
 
 export default function Column() {
   const [nameText, setNameText] = useState("");
@@ -25,7 +26,7 @@ export default function Column() {
         </div>
         <input
           className="column-input-filter"
-          placeholder="Search contact"
+          placeholder={SEARCH_BAR_PLACEHOLDER}
           value={filterText}
           onChange={(e) => {
             setFilterText(e.target.value);
