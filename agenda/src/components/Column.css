@@ -21,6 +21,7 @@
     font-size: medium;
     border: none;
     outline: none;
+    box-shadow: 4px 4px 5px -4px rgba(135,135,135,0.75);
 }
 
 .add-button button {
