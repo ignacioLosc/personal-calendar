@@ -25,4 +25,6 @@ Node.js
 npm run dev
 ```
 
-![image](https://github.com/ignacioLosc/personal-calendar/assets/75215254/22dca59d-c062-4a8c-a888-aa0171edd9fc)
+![Captura](https://github.com/ignacioLosc/personal-calendar/assets/75215254/98c770a7-ba58-4a23-b86f-0b245d0694c6)
+
+
